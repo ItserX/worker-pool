@@ -60,13 +60,13 @@ Creates a new worker pool with the specified number of workers.
 Adds a new worker to the pool.
 
 ### `DeleteWorker()`  
-Removes a worker from the pool. Won't remove workers if none exist.
+Removes a worker from the pool. 
 
 ### `SendJob(data string)`  
-Sends a job to the pool for processing. Won't accept jobs if no workers exist.
+Sends a job to the pool for processing.
 
 ### `GracefulShutdown()`  
-Initiates a graceful shutdown - waits for all pending jobs to complete before shutting down.
+Initiates a graceful shutdown.
 
 ## Testing
 ```sh
