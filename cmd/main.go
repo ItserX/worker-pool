@@ -16,7 +16,7 @@ func main() {
 
 	wp.AddWorker()
 
-	for i := 6; i <= 10; i++ {
+	for i := 1; i <= 10; i++ {
 		task := fmt.Sprintf("task-%d", i)
 		wp.SendJob(task)
 	}
@@ -24,7 +24,7 @@ func main() {
 	wp.DeleteWorker()
 	wp.DeleteWorker()
 
-	for i := 9; i <= 10; i++ {
+	for i := 1; i <= 10; i++ {
 		task := fmt.Sprintf("task-%d", i)
 		wp.SendJob(task)
 	}
