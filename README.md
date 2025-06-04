@@ -18,35 +18,35 @@ go get github.com/ItserX/worker-pool
 ## Example
 ```
 func main() {
-  // create a pool with 3 workers
+  	// create a pool with 3 workers
 	wp := pool.NewWorkerPool(3)
 
-  // send 10 tasks
+  	// send 10 tasks
 	for i := 1; i <= 10; i++ {
 		task := fmt.Sprintf("task-%d", i)
 		wp.SendJob(task)
 	}
 
-// add worker
+	// add worker
 	wp.AddWorker()
 
-// send 10 tasks
+	// send 10 tasks
 	for i := 1; i <= 10; i++ {
 		task := fmt.Sprintf("task-%d", i)
 		wp.SendJob(task)
 	}
 
-  // delete 2 workers
+  	// delete 2 workers
 	wp.DeleteWorker()
 	wp.DeleteWorker()
 
-  // send 10 tasks
+  	// send 10 tasks
 	for i := 1; i <= 10; i++ {
 		task := fmt.Sprintf("task-%d", i)
 		wp.SendJob(task)
 	}
 
-  // gracefully shutdown
+  	// gracefully shutdown
 	wp.GracefulShutdown()
 }
 ```
